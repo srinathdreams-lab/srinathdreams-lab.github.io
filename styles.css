@@ -7,7 +7,7 @@
 
 :root {
     /* Blue Tech Color Scheme */
-    --light-purple: #CBC3E3
+    --light-orange: #ff7f50;
     --navy-dark: #1a365d;
     --navy-medium: #2d3748;
     --navy-light: #4a5568;
@@ -56,7 +56,7 @@ body {
     font-family: var(--font-primary);
     font-weight: var(--font-weight-regular);
     line-height: 1.6;
-    color: var(--light-purple);
+    color: var(--light-orange);
     background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-medium) 100%);
     min-height: 100vh;
 }
