@@ -12,11 +12,13 @@
     --purple-light: #a855f7;
     --purple-primary: #9333ea;
     --purple-accent: #c084fc;
-    --purple-bright: #e879f9;
     --white: #ffffff;
     --gray-light: #f8fafc;
     --gray-medium: #e2e8f0;
     --gray-dark: #64748b;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -56,7 +58,7 @@ body {
     font-family: var(--font-primary);
     font-weight: var(--font-weight-regular);
     line-height: 1.6;
-    color: var(--purple-medium);
+    color: var(--white);
     background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-medium) 50%, var(--purple-primary) 100%);
     min-height: 100vh;
 }
@@ -91,7 +93,7 @@ body {
 .nav-brand {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
-    color: var(--purple-bright);
+    color: var(--white);
     text-decoration: none;
     font-family: var(--font-display);
 }
@@ -191,7 +193,7 @@ body {
 
 .hero-subtitle {
     font-size: clamp(1.25rem, 3vw, 1.5rem);
-    color: var(--purple-bright);
+    color: var(--white);
     font-weight: var(--font-weight-medium);
     margin-bottom: var(--spacing-md);
     font-family: var(--font-display);
@@ -278,7 +280,7 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: var(--font-weight-bold);
-    color: var(--purple-bright);
+    color: var(--white);
     margin-bottom: var(--spacing-xs);
     font-family: var(--font-display);
 }
@@ -301,7 +303,7 @@ section {
     font-weight: var(--font-weight-bold);
     text-align: center;
     margin-bottom: var(--spacing-xl);
-    color: var(--purple-dark);
+    color: var(--white);
     position: relative;
     font-family: var(--font-display);
 }
@@ -316,23 +318,11 @@ section {
     border-radius: 2px;
 }
 
-/* About Section */
-.about {
-    background: var(--white);
-}
-
-.about-text {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    color: var(--purple-medium);
-}
+/* About section removed */
 
 /* Projects Section */
 .projects {
-    background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 50%, rgba(248, 250, 252, 0.8) 100%);
+    background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-medium) 50%, var(--purple-primary) 100%);
 }
 
 .projects-grid {
@@ -343,12 +333,13 @@ section {
 }
 
 .project-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: var(--spacing-xl);
     box-shadow: var(--shadow-md);
     transition: var(--transition-medium);
-    border: 1px solid var(--gray-medium);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -376,7 +367,7 @@ section {
     font-size: 1.25rem;
     font-weight: var(--font-weight-semibold);
     margin-bottom: var(--spacing-sm);
-    color: var(--purple-dark);
+    color: var(--white);
     font-family: var(--font-display);
 }
 
@@ -398,9 +389,10 @@ section {
 }
 
 .project-description {
-    color: var(--purple-medium);
+    color: var(--white);
     margin-bottom: var(--spacing-md);
     line-height: 1.6;
+    opacity: 0.9;
 }
 
 .project-impact {
@@ -410,18 +402,28 @@ section {
 
 .impact-label {
     font-weight: var(--font-weight-semibold);
-    color: var(--purple-dark);
+    color: var(--white);
     margin-right: var(--spacing-xs);
 }
 
 .impact-value {
-    color: var(--purple-primary);
-    font-weight: var(--font-weight-medium);
+    color: var(--white);
+    font-weight: var(--font-weight-semibold);
+}
+
+.project-details {
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    color: var(--white);
+    opacity: 0.8;
+    line-height: 1.5;
 }
 
 /* Skills Section */
 .skills {
-    background: var(--white);
+    background: linear-gradient(135deg, var(--purple-medium) 0%, var(--purple-primary) 50%, var(--purple-accent) 100%);
 }
 
 .skills-grid {
@@ -456,7 +458,7 @@ section {
     font-size: 1.25rem;
     font-weight: var(--font-weight-semibold);
     margin-bottom: var(--spacing-md);
-    color: var(--purple-bright);
+    color: var(--white);
     font-family: var(--font-display);
 }
 
@@ -480,7 +482,7 @@ section {
 }
 
 .skill-list li:hover {
-    color: var(--purple-bright);
+    color: var(--white);
     transform: translateX(5px);
 }
 
@@ -495,7 +497,7 @@ section {
 }
 
 .contact .section-title::after {
-    background: linear-gradient(to right, var(--purple-bright), var(--purple-accent));
+    background: linear-gradient(to right, var(--white), var(--purple-accent));
 }
 
 .contact-content {
