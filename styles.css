@@ -6,20 +6,21 @@
 }
 
 :root {
-    /* Blue Tech Color Scheme */
-    --navy-dark: #1a365d;
-    --navy-medium: #2d3748;
-    --navy-light: #4a5568;
-    --cyan-primary: #00bcd4;
-    --cyan-light: #4dd0e1;
-    --cyan-accent: #26c6da;
+    /* Purple Vibrant Color Scheme */
+    --purple-dark: #4c1d95;
+    --purple-medium: #7c3aed;
+    --purple-light: #a855f7;
+    --purple-primary: #9333ea;
+    --purple-accent: #c084fc;
+    --purple-bright: #e879f9;
     --white: #ffffff;
-    --gray-light: #f7fafc;
+    --gray-light: #f8fafc;
     --gray-medium: #e2e8f0;
-    --gray-dark: #718096;
+    --gray-dark: #64748b;
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Poppins', 'Inter', sans-serif;
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
@@ -55,8 +56,8 @@ body {
     font-family: var(--font-primary);
     font-weight: var(--font-weight-regular);
     line-height: 1.6;
-    color: var(--navy-medium);
-    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-medium) 100%);
+    color: var(--purple-medium);
+    background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-medium) 50%, var(--purple-primary) 100%);
     min-height: 100vh;
 }
 
@@ -71,9 +72,9 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(26, 54, 93, 0.95);
+    background: rgba(76, 29, 149, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(77, 208, 225, 0.2);
+    border-bottom: 1px solid rgba(192, 132, 252, 0.3);
     z-index: 1000;
     transition: var(--transition-medium);
 }
@@ -90,8 +91,9 @@ body {
 .nav-brand {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
-    color: var(--cyan-primary);
+    color: var(--purple-bright);
     text-decoration: none;
+    font-family: var(--font-display);
 }
 
 .nav-menu {
@@ -110,8 +112,8 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--cyan-light);
-    background: rgba(77, 208, 225, 0.1);
+    color: var(--purple-accent);
+    background: rgba(192, 132, 252, 0.15);
 }
 
 .nav-toggle {
@@ -133,7 +135,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-medium) 50%, var(--cyan-primary) 100%);
+    background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-medium) 30%, var(--purple-primary) 70%, var(--purple-accent) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -146,9 +148,9 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(77, 208, 225, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(0, 188, 212, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(38, 198, 218, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(192, 132, 252, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(232, 121, 249, 0.15) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -179,6 +181,7 @@ body {
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-sm);
     line-height: 1.1;
+    font-family: var(--font-display);
 }
 
 .name-highlight {
@@ -188,9 +191,10 @@ body {
 
 .hero-subtitle {
     font-size: clamp(1.25rem, 3vw, 1.5rem);
-    color: var(--cyan-light);
+    color: var(--purple-bright);
     font-weight: var(--font-weight-medium);
     margin-bottom: var(--spacing-md);
+    font-family: var(--font-display);
 }
 
 .hero-description {
@@ -207,7 +211,7 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--cyan-primary), var(--cyan-accent));
+    background: linear-gradient(135deg, var(--purple-primary), var(--purple-accent));
     color: var(--white);
     padding: var(--spacing-sm) var(--spacing-lg);
     text-decoration: none;
@@ -237,7 +241,7 @@ body {
 
 .btn-secondary:hover {
     background: var(--white);
-    color: var(--navy-dark);
+    color: var(--purple-dark);
     transform: translateY(-2px);
 }
 
@@ -265,17 +269,18 @@ body {
 .stat-item {
     text-align: center;
     padding: var(--spacing-md);
-    background: rgba(77, 208, 225, 0.1);
+    background: rgba(192, 132, 252, 0.15);
     border-radius: 15px;
-    border: 1px solid rgba(77, 208, 225, 0.2);
+    border: 1px solid rgba(192, 132, 252, 0.3);
 }
 
 .stat-number {
     display: block;
     font-size: 2rem;
     font-weight: var(--font-weight-bold);
-    color: var(--cyan-light);
+    color: var(--purple-bright);
     margin-bottom: var(--spacing-xs);
+    font-family: var(--font-display);
 }
 
 .stat-label {
@@ -296,8 +301,9 @@ section {
     font-weight: var(--font-weight-bold);
     text-align: center;
     margin-bottom: var(--spacing-xl);
-    color: var(--navy-dark);
+    color: var(--purple-dark);
     position: relative;
+    font-family: var(--font-display);
 }
 
 .section-title::after {
@@ -305,7 +311,7 @@ section {
     display: block;
     width: 80px;
     height: 4px;
-    background: linear-gradient(to right, var(--cyan-primary), var(--cyan-accent));
+    background: linear-gradient(to right, var(--purple-primary), var(--purple-accent));
     margin: var(--spacing-md) auto 0;
     border-radius: 2px;
 }
@@ -321,12 +327,12 @@ section {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    color: var(--navy-medium);
+    color: var(--purple-medium);
 }
 
 /* Projects Section */
 .projects {
-    background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 100%);
+    background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 50%, rgba(248, 250, 252, 0.8) 100%);
 }
 
 .projects-grid {
@@ -354,7 +360,7 @@ section {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(to right, var(--cyan-primary), var(--cyan-accent));
+    background: linear-gradient(to right, var(--purple-primary), var(--purple-accent));
 }
 
 .project-card:hover {
@@ -370,7 +376,8 @@ section {
     font-size: 1.25rem;
     font-weight: var(--font-weight-semibold);
     margin-bottom: var(--spacing-sm);
-    color: var(--navy-dark);
+    color: var(--purple-dark);
+    font-family: var(--font-display);
 }
 
 .project-tags {
@@ -380,7 +387,7 @@ section {
 }
 
 .tag {
-    background: linear-gradient(135deg, var(--cyan-primary), var(--cyan-accent));
+    background: linear-gradient(135deg, var(--purple-primary), var(--purple-accent));
     color: var(--white);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
@@ -391,7 +398,7 @@ section {
 }
 
 .project-description {
-    color: var(--navy-medium);
+    color: var(--purple-medium);
     margin-bottom: var(--spacing-md);
     line-height: 1.6;
 }
@@ -403,12 +410,12 @@ section {
 
 .impact-label {
     font-weight: var(--font-weight-semibold);
-    color: var(--navy-dark);
+    color: var(--purple-dark);
     margin-right: var(--spacing-xs);
 }
 
 .impact-value {
-    color: var(--cyan-primary);
+    color: var(--purple-primary);
     font-weight: var(--font-weight-medium);
 }
 
@@ -425,7 +432,7 @@ section {
 }
 
 .skill-category {
-    background: linear-gradient(135deg, var(--navy-dark), var(--navy-medium));
+    background: linear-gradient(135deg, var(--purple-dark), var(--purple-medium));
     color: var(--white);
     padding: var(--spacing-xl);
     border-radius: 15px;
@@ -441,7 +448,7 @@ section {
     right: 0;
     width: 100px;
     height: 100px;
-    background: radial-gradient(circle, rgba(77, 208, 225, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(192, 132, 252, 0.3) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -449,7 +456,8 @@ section {
     font-size: 1.25rem;
     font-weight: var(--font-weight-semibold);
     margin-bottom: var(--spacing-md);
-    color: var(--cyan-light);
+    color: var(--purple-bright);
+    font-family: var(--font-display);
 }
 
 .skill-list {
@@ -467,18 +475,18 @@ section {
     content: '▶';
     position: absolute;
     left: 0;
-    color: var(--cyan-accent);
+    color: var(--purple-accent);
     font-size: 0.8rem;
 }
 
 .skill-list li:hover {
-    color: var(--cyan-light);
+    color: var(--purple-bright);
     transform: translateX(5px);
 }
 
 /* Contact Section */
 .contact {
-    background: linear-gradient(135deg, var(--navy-dark), var(--navy-medium));
+    background: linear-gradient(135deg, var(--purple-dark), var(--purple-medium));
     color: var(--white);
 }
 
@@ -487,7 +495,7 @@ section {
 }
 
 .contact .section-title::after {
-    background: linear-gradient(to right, var(--cyan-light), var(--cyan-accent));
+    background: linear-gradient(to right, var(--purple-bright), var(--purple-accent));
 }
 
 .contact-content {
@@ -517,14 +525,14 @@ section {
     color: var(--white);
     text-decoration: none;
     padding: var(--spacing-sm) var(--spacing-md);
-    background: rgba(77, 208, 225, 0.1);
+    background: rgba(192, 132, 252, 0.15);
     border-radius: 50px;
     transition: var(--transition-medium);
-    border: 1px solid rgba(77, 208, 225, 0.3);
+    border: 1px solid rgba(192, 132, 252, 0.4);
 }
 
 .contact-link:hover {
-    background: var(--cyan-primary);
+    background: var(--purple-primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -535,11 +543,11 @@ section {
 
 /* Footer */
 .footer {
-    background: var(--navy-dark);
+    background: var(--purple-dark);
     color: var(--gray-medium);
     text-align: center;
     padding: var(--spacing-lg) 0;
-    border-top: 1px solid rgba(77, 208, 225, 0.2);
+    border-top: 1px solid rgba(192, 132, 252, 0.3);
 }
 
 /* Animations */
@@ -584,7 +592,7 @@ section {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--navy-dark);
+        background: var(--purple-dark);
         flex-direction: column;
         padding: var(--spacing-md);
         box-shadow: var(--shadow-lg);
@@ -691,7 +699,7 @@ section {
     .hero {
         min-height: auto;
         background: var(--white);
-        color: var(--navy-dark);
+        color: var(--purple-dark);
     }
     
     section {
