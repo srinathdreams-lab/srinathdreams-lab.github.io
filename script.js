@@ -319,10 +319,10 @@ function initLoadingState() {
     window.addEventListener('load', () => {
         document.body.classList.add('loaded');
         
-        // Trigger initial animations
-        setTimeout(() => {
-            initTypewriterEffect();
-        }, 500);
+        // Typewriter effect disabled - subtitle loads immediately
+        // setTimeout(() => {
+        //     initTypewriterEffect();
+        // }, 500);
     });
 }
 

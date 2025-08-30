@@ -175,8 +175,7 @@ body {
 }
 
 .hero-content {
-    max-width: 500px;
-    animation: slideInLeft 1s ease-out;
+    max-width: 650px;
 }
 
 .hero-title {
@@ -260,18 +259,19 @@ body {
     padding: var(--spacing-xl);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: var(--shadow-xl);
-    max-width: 400px;
+    max-width: 600px;
+    width: 100%;
 }
 
 .stats {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
 }
 
 .stat-item {
     text-align: center;
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-xs);
     background: rgba(192, 132, 252, 0.15);
     border-radius: 15px;
     border: 1px solid rgba(192, 132, 252, 0.3);
