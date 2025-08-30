@@ -134,12 +134,13 @@ body {
 
 /* Hero Section - Split Screen Design */
 .hero {
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-medium) 30%, var(--purple-primary) 70%, var(--purple-accent) 100%);
     position: relative;
     overflow: hidden;
+    padding-top: 80px;
 }
 
 .hero::before {
@@ -158,14 +159,14 @@ body {
 
 .hero-left {
     flex: 1;
-    padding: var(--spacing-2xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md) var(--spacing-2xl);
     z-index: 2;
     position: relative;
 }
 
 .hero-right {
     flex: 1;
-    padding: var(--spacing-2xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md) var(--spacing-2xl);
     display: flex;
     justify-content: center;
     align-items: center;
